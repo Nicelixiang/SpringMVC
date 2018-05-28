@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>添加</title>
+<script type="text/javascript">
+
+function test(file,alerttext){
+		with(file){
+			if(value==null||value==""){
+				alert(alerttext);
+				return false;
+			}else{
+				
+				return true;
+			};
+		};
+	};
+//表单提交时验证
+	function sub(){
+		var form = document.getElementById("userForm");
+		alert(form);
+		with(form){
+			//非空验证
+			if(test(name,"不能为空")&amp;test(age,"不能为空")&amp;test(phoneNum,"不能为空")){
+				
+			}else{
+				
+				return false;
+			};
+			if(!phoneNum.test("/^[0-9]{11}$/")){
+				return false;
+			};
+		};
+	};
+
+</script>
+</head>
+<body>
+	<form id="userForm" action="/save" method="post" onsubmit="return sub(this)">
+		姓名:<input name="name" type="text"/><br/>
+		年龄：<input name="age" type="text"/><br/>
+		电话：<input name="phoneNum" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'')"/><br/>
+		<input name="提交" type="submit" value="提交" /><br/>
+	</form>
+</body>
+</html>

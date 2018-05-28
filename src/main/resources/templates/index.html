@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>主页</title>
+</head>
+<body>
+	<span th:text="${msg}"></span>
+	<br/>
+	<span th:text="${data}"></span>
+	<br/>
+	<span th:text="${user.name}"></span>
+	<span th:text="${user.age}"></span>
+	<span th:text="${user.phoneNum}"></span>
+	<form id="thisForm" action="save.action" method="post">
+		<input name="name" value="小红"/>
+		<input name="age" value="23"/>
+		<input name="phoneNum" value="456789"/>
+		<input type="submit" value="提交" />
+	</form>
+</body>
+</html>
