@@ -62,7 +62,7 @@ public class UserController {
 		User user = new User();
 		user.setAge(18);
 		user.setName("王涛");
-		user.setPhone("15522773763");
+		user.setPhoneNum("15522773763");
 		model.addAttribute(user);
 		return "s";
 	}
@@ -72,7 +72,7 @@ public class UserController {
 		
 	      PrintWriter out = response.getWriter();
 	      
-	      out.println("王涛");
+	      out.println("jjj");
 	      return "delete";
 	}
 	
