@@ -61,7 +61,7 @@ public class UserController {
 	public String redirectTest(Model model) {
 		User user = new User();
 		user.setAge(18);
-		user.setName("王涛");
+		user.setName("jjj");
 		user.setPhoneNum("15522773763");
 		model.addAttribute(user);
 		return "s";
